@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body onkeydown="run(event)">
+    <p id="demo">text</p>
+    <button type="button" onclick="change()">change</button>
+    <script>
+        window.onload = ()  => { 
+        //script는 원래 마지막에 들어가야하지만 window.onload를 쓰면 다른 걸 다 실행시킨 후에 실행되므로 위쪽에 쓸 수 있다.
+            document.getElementById("demo").innerHTML = "첫 화면";
+        }
+        function change() {
+            document.getElementById("demo").innerHTML = "change";
+        }
+        function run(event){
+            //출력방법!
+            console.log(event);
+            if(event.keyCode == 82){
+                document.body.style.backgroundColor = '#ff0000';    
+            } else if(event.keyCode == 66){
+                document.body.style.backgroundColor = 'blue';
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

@@ -1,18 +1,17 @@
 <body>
     <script>
         const map = ['가위', '바위', '보'];
-        const player = 0;
+        const player = parseInt(Math.random() * 3);
         const com = parseInt(Math.random() * 3);
-        console.log(com);
         console.log(`player: ${map[player]}, com: ${map[com]}`);
 
         let result = '';
 
-        if(com == 0) {
-            result = '비김'
-        } else if(com == 1) {
+        if((player+1)%3 == com) {
             result = 'com 승'
-        } else if(com ==2) {result = 'player 승'}
+        } else if(player == com) {
+            result = '비김'
+        } else {result = 'player 승'}
 
         console.log(`결과: ${result}`);
 

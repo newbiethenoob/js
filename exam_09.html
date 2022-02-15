@@ -1,0 +1,33 @@
+<body>
+    <script>
+        function total() {
+            let sum = 0;
+            if (arguments.length < 1) {
+                for (let i = 1; i <= 10; i++) {
+                    sum += i;
+                } return sum;
+            } else { 
+                for (let i = 0; i < arguments.length; i++) {
+                    sum += arguments[i];
+                }return sum;
+            }
+        }
+        // function total(...args){
+        //     let sum = 0;
+        //     args.forEach(function(v){
+        //         sum += v;
+        //     });
+        //     if(args.length == 0){
+        //         sum = 55;
+        //     }
+        //     return sum;
+        // }
+        
+        var result1 = total(); // 인자가 없는 경우 1 ~ 10 까지의 합 결과 반환
+        console.log('result1 -> ' + result1);
+        var result2 = total(1, 2, 3);
+        console.log('result2 -> ' + result2);
+        var result3 = total(5, 6, 7, 8, 9);
+        console.log('result3 -> ' + result3);
+    </script>
+</body>

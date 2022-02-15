@@ -1,0 +1,24 @@
+<body>
+    <script>
+        // 원래 함수의 사용법을 모르고 사용!
+        const getPosition = function(pos){
+
+        };
+        navigator.geolocation.getCurrentPosition(getPosition);0
+        // navigator.geolocation.getCurrentPosition(function(pos){
+        //     let latitude = pos.coords.latitude;
+        //     let longitude = pos.coords.longitude;
+        //     console.log(latitude, longitude);
+        // })
+        // 어떠한 형식의 함수든 관계없음
+        function outer(){
+            console.log('outer!');
+            return function inner(){
+                console.log('inner!');
+            }
+        }
+        outer()();
+        // const result = outer();
+        // result(); // = function inner()
+    </script>
+</body>

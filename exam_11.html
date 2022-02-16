@@ -1,0 +1,28 @@
+<body>
+    <script>
+        class Shape {
+            constructor(width, height, color) {
+                this.width = width;
+                this.height = height;
+                this.color = color;
+            }
+        }
+        class Rectangle extends Shape{
+            // constructor(width, height, color) {
+            //     super(width, height, color);
+            // }
+            draw(){
+                console.log('drawing blue');
+            }
+            getArea() {
+                return `getArea() => ${this.width * this.height}`;
+            }
+        }
+
+        //windows key + . => Emoji 🔺❌⭕ 
+        const rec = new Rectangle(20, 20);
+        rec.draw();
+        console.log(rec.getArea());
+        
+    </script>
+</body>

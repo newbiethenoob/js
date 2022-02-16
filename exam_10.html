@@ -1,0 +1,21 @@
+<body>
+    <script>
+        class User {
+            constructor(fristName, lastName, age){
+                this.fristName = fristName;
+                this.lastName = lastName;
+                this.age = age;
+            }
+            get age(){
+                return this._age;
+            }
+            set age(value){ //캡슐화
+                if(value<0) this._age = 0;
+            }
+        }
+        const user = new User('Steve', 'Job', -1);
+        console.log(user);
+        console.log(user.fristName, user.lastName);
+        console.log(user.age);
+    </script>
+</body>

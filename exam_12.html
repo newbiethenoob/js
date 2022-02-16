@@ -1,0 +1,32 @@
+<body>
+    <script>
+        const article = {
+            num: 1,
+            title: 'A',
+            reply: [
+                { num: 3, title: 'A-3' },
+                { num: 2, title: 'A-2' },
+                { num: 1, title: 'A-1' }
+            ]
+        };
+        // 내가한거
+        // for(let key in article){
+        //     console.log(article[key]);
+        // }
+        // for(let value of article.reply){
+        //     console.log(value);
+        // }
+
+        // 강사님이 한거
+        for(let key in article){
+            const value = article[key];
+            if(typeof value == 'object'){
+                for(let key2 in value){
+                console.log(value[key2]);
+                }
+            }else{
+                console.log(value);
+            }
+        }
+    </script>
+</body>

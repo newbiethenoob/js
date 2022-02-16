@@ -1,0 +1,35 @@
+<body>
+    <script>
+        const obj = {
+            name : 'Meong',
+            address : {
+                si : '세종',
+                gu : '조치원',
+                dong : '서창리'
+            },
+            hobby : [
+                {
+                    name: '당구',
+                    desc: '3쿠션'
+                },
+                {
+                    name: '먹방',
+                    desc: '치킨'
+                },
+                {
+                    name: '게임',
+                    desc: '뱀파이어 서바이벌'
+                }
+            ]
+        }
+        const gu = obj.address.gu;
+        console.log(gu);
+
+        // 취미 - 당구 - 3쿠션
+        console.log(`${obj.hobby[0].name} - ${obj.hobby[0].desc}`);
+        // Parsing
+        for(let i=0;i<obj.hobby.length;i++){
+            console.log(`${obj.hobby[i].name} - ${obj.hobby[i].desc}`);
+        }
+    </script>
+</body>

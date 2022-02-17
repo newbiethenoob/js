@@ -1,0 +1,20 @@
+<body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 라이브러리 가져오기 -->
+    <script>
+        // get 방식으로 사용 시 url만 있으면 됨
+        const data = axios({
+            url: 'https://newsapi.org/v2/top-headlines?country=kr&apiKey=9f5baf7d9f3f42879a20d7d19d9886e4'
+        });
+        data.then(function (result) {
+            console.log(result.data);
+            const obj = result.data;
+            const articles = obj.articles;
+            for(let article of articles){
+                const title = article.title;
+                console.log(title);
+            }
+            
+        });
+    </script>
+</body>

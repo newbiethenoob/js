@@ -15,20 +15,11 @@
             new Student('D', 40, false, 66),
             new Student('E', 18, true, 90),
         ];
-
-        const s = students
-            .filter(v => v.score >= 50)
-            .map(v => v.name)
-        console.log(s.join(' ')); //문자열로 
-
-        //const result = students.filter((v) => {
-        //    return v.score >= 50;
-        //})
-        //const stu = result.map((v) => {
-        //        return v.name;
-        //});
-        //    
-        //console.log(stu);
-
+        const result = students.reduce((p, c, i, arr) => {
+            return p + c.score;
+        }, 0);
+        const avg = result/students.length;
+        console.log(`합 => ${result}`);
+        console.log(`평균 => ${avg}`);
     </script>
 </body>

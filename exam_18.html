@@ -1,0 +1,22 @@
+<body>
+    <script>
+        const max = (array) => {
+            let output = array[0];
+            array.forEach((val) => {
+                output = val > output ? val : output;
+            });
+            // for(let i=0;i<=array.length;i++){
+            //     output = array[i] > output ? array[i] : output; 
+            // }
+        return output;
+        };
+        
+        console.log(
+            max([441, 52, 30, 463])
+        );
+
+        // 다른 방법 Math.max()
+        const arr = [11,234,6787,44,332,3,5,54,555];
+        console.log(Math.max(...arr));
+    </script>
+</body>

@@ -1,0 +1,22 @@
+<body>
+    <script>
+        //bathroom 제거, animals 추가
+        const house = {
+            bathroom: 1,
+            room: 2,
+            address: ['제주도', '제주시', '연동'],
+            persons: [
+                { name: 'kim' },
+                { name: 'lee' }
+            ]
+        };
+        console.log(house);
+        delete house['bathroom']; //bathroom 삭제
+        //animals 추가
+        const animals = [];
+        animals[0] = '🐶';
+        animals.push('🐭');
+        house.animals = animals;
+        console.log(house);
+    </script>
+</body>

@@ -1,0 +1,17 @@
+<body>
+    <script>
+        const arr = [
+            {age: 10, name:'a'},
+            {age: 11, name:'b'},
+            {age: 14, name:'w'},
+            {age: 123, name:'e'},
+            {age: 57, name:'d'},
+        ];
+        console.log(arr);
+
+        arr.sort(function(next, prev){
+            return prev.age - next.age;
+        });
+        console.log(arr);
+    </script>
+</body>

@@ -1,0 +1,27 @@
+<body>
+    <script>
+
+        const array = ['🍕', '🍔', '🍟', '🌭', '🍖', '🍕'];
+        console.log(array.indexOf('🍔')); // 1
+        console.log(array.indexOf('🍙')); // -1
+        console.log(array.indexOf('🍖')); // 4
+
+        console.log(array.indexOf('🍕'));
+        let cnt = 0;
+        array.forEach((v) => {
+            if(v == '🍕') cnt++; 
+        });
+        console.log(cnt);
+
+        let idx =0;
+        let count = 0;
+        while( true ){ //array.includes('🍕') 
+            idx = array.indexOf('🍕', idx);
+            if(idx == -1) break;
+            count++;
+            idx += 1;
+        }
+        console.log(count);
+
+    </script>
+</body>

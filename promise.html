@@ -1,0 +1,26 @@
+<body>
+    <script>
+        // const  p = new Promise( (resolve, reject) => {
+        //     //1초 뒤 메세지 출력
+        //     setTimeout(()=>{resolve('완료!');},3000);
+            
+        // } );
+        async function first(){
+            return 'complete!';
+        }
+        async function print(){
+            const r = await first();  
+            //console.log(r);
+            return r; 
+        }
+        print().then( msg => { console.log(msg); })
+        // r.then((msg) => {
+        //     console.log(msg);
+        // })
+        // //페이지를 열자마자 호출
+        // console.log(p);
+
+        // //promise가 작업이 완료되면 호출
+        // p.then( ( result ) => { console.log('끝!', result); } );
+    </script>
+</body>

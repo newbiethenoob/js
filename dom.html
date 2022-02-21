@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const h1 = document.createElement('h1');
+        const text = document.createTextNode('제목');
+        h1.appendChild(text);
+        document.body.appendChild(h1);
+        let html = '<h2>부제목</h2>';
+        h1.style.color = 'red';
+        document.body.innerHTML += html;
+
+        // console.log(document.head);
+        // console.log(document.title);
+        // console.log(document.body);
+        const nodes = document.head.childNodes;
+        for(let node of nodes){
+            console.log(nodes);
+        }
+    </script>
+</body>
+
+</html>

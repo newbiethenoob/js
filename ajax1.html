@@ -4,14 +4,12 @@
     <script>
         // get 방식으로 사용 시 url만 있으면 됨
         const data = axios({
-            url: 'http://ggoreb.com/ajax/json/data1.jsp'
+            url: 'http://ggoreb.com/ajax/json/data1.jsp',
+            method : 'get', // get, post, (put, delete)
+            params: {            }
         });
         data.then(function (result) {
             console.log(result.data);
-            const obj = result.data;
-            const name = obj.name;
-            const age = obj.age;
-            console.log(name, age);
         });
     </script>
 </body>
